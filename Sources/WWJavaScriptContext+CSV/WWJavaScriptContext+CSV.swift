@@ -7,15 +7,15 @@ extension WWJavaScriptContext {
     
     open class CSV: NSObject {
         
-        public static let shared = CSV(path: "PapaParse-5.4.1.js")
+        public static let shared = CSV(filename: "PapaParse-5.4.1.js")
         
         var context: WWJavaScriptContext?
         
         private override init() {}
         
-        convenience init(path: String) {
+        convenience init(filename: String) {
             self.init()
-            self.context = self.build()
+            self.context = self.build(with: filename)
         }
     }
 }
@@ -62,9 +62,9 @@ private extension WWJavaScriptContext.CSV {
     
     /// 建立初始物件
     /// - Returns: WWJavaScriptContext?
-    func build() -> WWJavaScriptContext? {
+    func build(with filename: String) -> WWJavaScriptContext? {
         
-        guard let script = readScript(with: "PapaParse-5.4.1.js") else { return nil }
+        guard let script = readScript(with: filename) else { return nil }
         return WWJavaScriptContext.build(script: script)
     }
     
