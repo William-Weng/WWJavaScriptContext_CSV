@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWJavaScriptContext_CSV",
       "state" : {
-        "branch" : "main",
-        "revision" : "aa5bae3b9fcd0a49fbbeeb38a6c220de4c54d5f8"
+        "revision" : "b7831c3cd6f32d67ba8171f7591b3398746a74d8",
+        "version" : "1.0.1"
       }
     },
     {
