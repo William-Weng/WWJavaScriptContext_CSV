@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import WWPrint
 import WWJavaScriptContext
 import WWJavaScriptContext_CSV
 
@@ -25,8 +24,8 @@ final class ViewController: UIViewController {
         
         defer { view.endEditing(true) }
         
-        guard let text = myTextView.text,
-              let array = WWJavaScriptContext.CSV.shared.convertArray(source: text),
+        guard let csv = myTextView.text,
+              let array = WWJavaScriptContext.CSV.shared.convert(csv: csv)?.toArray(),
               let jsonString = array._jsonString()
         else {
             return

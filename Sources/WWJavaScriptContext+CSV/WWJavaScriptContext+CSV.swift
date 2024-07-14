@@ -23,28 +23,11 @@ extension WWJavaScriptContext {
 // MARK: - 公開函數
 public extension WWJavaScriptContext.CSV {
     
-    /// [轉換Markdown => Array](https://www.papaparse.com/)
+    /// [解析CSV => JSValue](https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js)
     /// - Parameters:
-    ///   - context: WWJavaScriptContext
-    ///   - source: String
-    /// - Returns: [AnyHashable: Any]?
-    func convertArray(source: String) -> [Any]? {
-        
-        guard let jsValue = convertJSValue(source: source),
-              let array = jsValue.toArray()
-        else {
-            return nil
-        }
-        
-        return array
-    }
-    
-    /// [轉換Markdown => JSValue](https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js)
-    /// - Parameters:
-    ///   - context: WWJavaScriptContext
-    ///   - source: String
+    ///   - csv: [String](https://www.papaparse.com/)
     /// - Returns: JSValue?
-    func convertJSValue(source: String) -> JSValue? {
+    func convert(csv: String) -> JSValue? {
         
         guard let context = context,
               let script = readScript(with: "jsSource.js")
@@ -53,7 +36,7 @@ public extension WWJavaScriptContext.CSV {
         }
         
         _ = context.evaluateScript(script)
-        return context.callFunctionName("convertCSV", arguments: [source])
+        return context.callFunctionName("convertCSV", arguments: [csv])
     }
 }
 

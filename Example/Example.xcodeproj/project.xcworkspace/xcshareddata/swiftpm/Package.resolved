@@ -1,12 +1,13 @@
 {
+  "originHash" : "3dcfa487e0523da82040c1ed9bc023019b916e374451352efb4480c8ebd2729e",
   "pins" : [
     {
       "identity" : "wwjavascriptcontext",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWJavaScriptContext",
       "state" : {
-        "revision" : "983111177d7b64ef90f0c77d4db928187b9d756d",
-        "version" : "1.0.1"
+        "revision" : "605cb0a6f03fd007661ecd2586328a23c6665ab1",
+        "version" : "1.0.4"
       }
     },
     {
@@ -14,19 +15,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWJavaScriptContext_CSV",
       "state" : {
-        "revision" : "b7831c3cd6f32d67ba8171f7591b3398746a74d8",
-        "version" : "1.0.1"
-      }
-    },
-    {
-      "identity" : "wwprint",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/William-Weng/WWPrint",
-      "state" : {
-        "revision" : "6b70fabaa1dbeac95b224384819e231a1220900a",
-        "version" : "1.2.0"
+        "revision" : "5261416f624a83886cc464b79776afdeb3b7b75a",
+        "version" : "1.0.2"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

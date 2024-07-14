@@ -10,21 +10,19 @@
 ### [Installation with Swift Package Manager](https://medium.com/彼得潘的-swift-ios-app-開發問題解答集/使用-spm-安裝第三方套件-xcode-11-新功能-2c4ffcf85b4b)
 ```js
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWJavaScriptContext_CSV.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/William-Weng/WWJavaScriptContext_CSV.git", .upToNextMajor(from: "1.0.3"))
 ]
 ```
 
 ### Function - 可用函式
 |函式|功能|
 |-|-|
-|convertArray(source:)|轉換Markdown => Array|
-|convertJSValue(source:)|轉換Markdown => JSValue|
+|convert(csv:)|轉換CSV => JSValue|
 
 ### Example
 ```swift
 import UIKit
 import WebKit
-import WWPrint
 import WWJavaScriptContext
 import WWJavaScriptContext_CSV
 
@@ -42,7 +40,7 @@ final class ViewController: UIViewController {
         defer { view.endEditing(true) }
         
         guard let text = myTextView.text,
-              let array = WWJavaScriptContext.CSV.shared.convertArray(source: text),
+              let array = WWJavaScriptContext.CSV.shared.convert(csv: csv)?.toArray(),
               let jsonString = array._jsonString()
         else {
             return
