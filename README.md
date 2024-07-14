@@ -39,7 +39,7 @@ final class ViewController: UIViewController {
         
         defer { view.endEditing(true) }
         
-        guard let text = myTextView.text,
+        guard let csv = myTextView.text,
               let array = WWJavaScriptContext.CSV.shared.convert(csv: csv)?.toArray(),
               let jsonString = array._jsonString()
         else {
