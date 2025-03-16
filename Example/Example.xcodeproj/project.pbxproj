@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,11 +12,9 @@
 		3DBCD87B26F198EF00522E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87926F198EF00522E3B /* Main.storyboard */; };
 		3DBCD87D26F198F300522E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87C26F198F300522E3B /* Assets.xcassets */; };
 		3DBCD88026F198F300522E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBCD87E26F198F300522E3B /* LaunchScreen.storyboard */; };
-		649DD8162C437F780031413B /* WWJavaScriptContext+CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 649DD8152C437F780031413B /* WWJavaScriptContext+CSV */; };
-		649DD8192C4381270031413B /* WWJavaScriptContext+CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 649DD8182C4381270031413B /* WWJavaScriptContext+CSV */; };
+		3DD6F8CF2D86C62400DA7CD9 /* WWJavaScriptContext_CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 3DD6F8CE2D86C62400DA7CD9 /* WWJavaScriptContext_CSV */; };
 		8130039027D5D18100436128 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130038F27D5D18100436128 /* Constant.swift */; };
 		8130039227D5D19000436128 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130039127D5D19000436128 /* Extension.swift */; };
-		819D0CD72A9F23590060A839 /* WWJavaScriptContext+CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 819D0CD62A9F23590060A839 /* WWJavaScriptContext+CSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,9 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				649DD8192C4381270031413B /* WWJavaScriptContext+CSV in Frameworks */,
-				649DD8162C437F780031413B /* WWJavaScriptContext+CSV in Frameworks */,
-				819D0CD72A9F23590060A839 /* WWJavaScriptContext+CSV in Frameworks */,
+				3DD6F8CF2D86C62400DA7CD9 /* WWJavaScriptContext_CSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +137,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				819D0CD62A9F23590060A839 /* WWJavaScriptContext+CSV */,
-				649DD8152C437F780031413B /* WWJavaScriptContext+CSV */,
-				649DD8182C4381270031413B /* WWJavaScriptContext+CSV */,
+				3DD6F8CE2D86C62400DA7CD9 /* WWJavaScriptContext_CSV */,
 			);
 			productName = Example;
 			productReference = 3DBCD87026F198EF00522E3B /* Example.app */;
@@ -173,7 +167,7 @@
 			);
 			mainGroup = 3DBCD86726F198EF00522E3B;
 			packageReferences = (
-				649DD8172C4381270031413B /* XCRemoteSwiftPackageReference "WWJavaScriptContext_CSV" */,
+				3DD6F8CB2D86C5B800DA7CD9 /* XCLocalSwiftPackageReference "../../WWJavaScriptContext_CSV" */,
 			);
 			productRefGroup = 3DBCD87126F198EF00522E3B /* Products */;
 			projectDirPath = "";
@@ -355,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,6 +359,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -378,7 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Q5CYDAG3B;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -388,6 +383,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -416,30 +412,18 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		649DD8172C4381270031413B /* XCRemoteSwiftPackageReference "WWJavaScriptContext_CSV" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/William-Weng/WWJavaScriptContext_CSV";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.2;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		3DD6F8CB2D86C5B800DA7CD9 /* XCLocalSwiftPackageReference "../../WWJavaScriptContext_CSV" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../WWJavaScriptContext_CSV;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		649DD8152C437F780031413B /* WWJavaScriptContext+CSV */ = {
+		3DD6F8CE2D86C62400DA7CD9 /* WWJavaScriptContext_CSV */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "WWJavaScriptContext+CSV";
-		};
-		649DD8182C4381270031413B /* WWJavaScriptContext+CSV */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 649DD8172C4381270031413B /* XCRemoteSwiftPackageReference "WWJavaScriptContext_CSV" */;
-			productName = "WWJavaScriptContext+CSV";
-		};
-		819D0CD62A9F23590060A839 /* WWJavaScriptContext+CSV */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "WWJavaScriptContext+CSV";
+			package = 3DD6F8CB2D86C5B800DA7CD9 /* XCLocalSwiftPackageReference "../../WWJavaScriptContext_CSV" */;
+			productName = WWJavaScriptContext_CSV;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
